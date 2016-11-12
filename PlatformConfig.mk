@@ -68,6 +68,9 @@ BOARD_HAVE_ALTERNATE_FM := true
 BOARD_HAVE_QCOM_FM := true
 TARGET_QCOM_NO_FM_FIRMWARE := true
 
+#Inherit TWRP Config
+include device/sony/rhine/twrp.mk
+
 # Props for hotplugging
 TARGET_SYSTEM_PROP += device/sony/rhine/system.prop
 
