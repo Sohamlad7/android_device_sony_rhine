@@ -371,14 +371,6 @@ service qmuxd /system/vendor/bin/qmuxd
     user root
     group radio audio bluetooth gps nfc diag qcom_diag
 
-# SONY: TrimArea Daemon
-# Last 2 args: start block(blk size 128k), number of blocks(partitionsize(kb)/128(kb))
-service tad_static /system/vendor/bin/tad_static /dev/block/bootdevice/by-name/TA 0,16
-    user root
-    group root
-    socket tad stream 0660 system system
-    class core
-
 # Wi-Fi and BT MAC addresses
 service macaddrsetup /system/bin/macaddrsetup /sys/devices/fb000000.qcom,wcnss-wlan/wcnss_mac_addr
     class late_start
